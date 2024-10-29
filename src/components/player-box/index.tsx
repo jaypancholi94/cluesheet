@@ -218,7 +218,7 @@ export const PlayerBox: React.FC<PlayerBoxProps> = ({
               Updating this setting will reset clue sheet
             </div>
           )}
-          <DialogFooter className="pt-8">
+          <DialogFooter className="pt-8 gap-3 sm:gap-0 flex-col sm:flex-row">
             <Button type="submit">Save</Button>
             <Button
               onClick={() => {
