@@ -47,7 +47,10 @@ const RenderRows = ({
     return (
       <tr
         key={key}
-        className={cn("hover:bg-slate-100", row.isCrossed && "opacity-20")}
+        className={cn(
+          "hover:bg-slate-100",
+          row.isCrossed && !isHidden && "opacity-20",
+        )}
       >
         <td
           className={cn(
@@ -83,7 +86,7 @@ const RenderRows = ({
               )}
             >
               {isHidden ? (
-                "🫣"
+                <span className="text-xl">🫣</span>
               ) : (
                 <InputSelector
                   value={value[key]}
